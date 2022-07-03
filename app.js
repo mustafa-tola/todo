@@ -16,6 +16,7 @@ function addTodo(currentElement) {
     _deleteButton.setAttribute("onclick","deleteButton(this)")
     _li.appendChild(_editButton)
     _li.appendChild(_deleteButton)
+    _li.setAttribute("class","flex")
     list.appendChild(_li)
     _input.value = ""
     if(currentElement.innerText == "Edit Todo") {
@@ -24,10 +25,6 @@ function addTodo(currentElement) {
 }
 
 function editButton(currentElement) {
-    // currentElement.parentNode.remove()
-    // var ind = currentElement.parentNode.innerText.indexOf("Edit")
-    // _input.value = currentElement.parentNode.innerText.slice(0,ind)
-    // btn.innerText = "Edit Todo"
     var todo = prompt("Enter todo")
     currentElement.parentNode.firstChild.data = todo
 }

@@ -1,0 +1,26 @@
+.inp {
+    display: flex;
+    justify-content: space-around;
+}
+
+#todo_list li {
+    display: flex;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.inp input,.inp button {
+    border-radius: 50px;
+    height: 25px;
+}
+
+.flex {
+    background-color: antiquewhite;
+    list-style-type: none;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.flex button {
+    margin: 0px 50px;
+}
