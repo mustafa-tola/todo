@@ -2,7 +2,7 @@ var list = document.getElementById("todo_list")
 var _input = document.getElementById("todo_data")
 var btn = document.getElementById("toBeChangedButton")
 
-function addTodo() {
+function addTodo(currentElement) {
     var _li = document.createElement("li")
     var _editButton = document.createElement("button")
     var _deleteButton = document.createElement("button")
@@ -18,6 +18,9 @@ function addTodo() {
     _li.appendChild(_deleteButton)
     list.appendChild(_li)
     _input.value = ""
+    if(currentElement.innerText == "Edit Todo") {
+        currentElement.innerText = "Add Todo"
+    }
 }
 
 function editButton(currentElement) {
