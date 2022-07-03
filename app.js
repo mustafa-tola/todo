@@ -24,10 +24,12 @@ function addTodo(currentElement) {
 }
 
 function editButton(currentElement) {
-    currentElement.parentNode.remove()
-    var ind = currentElement.parentNode.innerText.indexOf("Edit")
-    _input.value = currentElement.parentNode.innerText.slice(0,ind)
-    btn.innerText = "Edit Todo"
+    // currentElement.parentNode.remove()
+    // var ind = currentElement.parentNode.innerText.indexOf("Edit")
+    // _input.value = currentElement.parentNode.innerText.slice(0,ind)
+    // btn.innerText = "Edit Todo"
+    var todo = prompt("Enter todo")
+    currentElement.parentNode.firstChild.data = todo
 }
 
 function deleteButton(currentElement) {
